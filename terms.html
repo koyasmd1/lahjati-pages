@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Lahjati Terms of Service</title>
+<meta name="description" content="The terms and conditions for using the Lahjati app.">
+<link rel="icon" href="icons/icon-192.png">
+<link rel="stylesheet" href="css/page.css">
+</head>
+<body>
+<header><a href="./"><img src="icons/icon-192.png" alt="" width="44" height="44"><span>Lahjati</span></a></header>
+<main id="terms">
+<h1>Terms of Service</h1>
+<noscript><p>Please turn on JavaScript to read the terms, or email <a href="mailto:koyasmd1@gmail.com">koyasmd1@gmail.com</a> for a copy.</p></noscript>
+</main>
+<script src="js/terms.js"></script>
+<script>
+/* Shows the same approved text the app shows on the payment page (js/terms.js), so the two never differ. */
+(function () {
+  var T = window.LAHJATI_TERMS, m = document.getElementById('terms');
+  if (!T) return;
+  function esc(s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;'); }
+  function fmt(s) { return esc(s).replace(/\*\*(.+?)\*\*/g, '<b>$1</b>'); }
+  var h = '<p class="muted">Last updated: ' + esc(T.updated) + '</p><p>' + fmt(T.intro) + '</p>';
+  T.sections.forEach(function (s) {
+    h += '<h2>' + fmt(s.h) + '</h2>';
+    s.p.forEach(function (p) { h += '<p>' + fmt(p) + '</p>'; });
+  });
+  h += '<p>See also our <a href="privacy.html">Privacy Policy</a>.</p>';
+  m.insertAdjacentHTML('beforeend', h);
+})();
+</script>
+</body>
+</html>

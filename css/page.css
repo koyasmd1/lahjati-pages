@@ -1,0 +1,14 @@
+/* Plain pages (privacy policy, account deletion). Same colours as the app. */
+:root{--g:#144943;--gold:#AC823F;--bg:#F5F2E9;--card:#fff;--line:#E6E0CF;--ink:#16302C;--mute:#5B6B66}
+@media (prefers-color-scheme:dark){:root{--g:#E2BE76;--gold:#D9B36B;--bg:#0B1B18;--card:#132925;--line:#25433D;--ink:#EAF1EE;--mute:#9FB6AF}}
+html,body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;font-size:17px;line-height:1.6}
+header{background:#144943;padding:14px 16px}
+header a{display:flex;align-items:center;gap:12px;max-width:760px;margin:0 auto;color:#F3DDA6;text-decoration:none;font-weight:700;font-size:20px}
+header img{border-radius:10px}
+main{max-width:760px;margin:0 auto;padding:8px 16px 48px}
+h1{color:var(--g);font-size:30px;line-height:1.2;margin:28px 0 6px}
+h2{color:var(--g);font-size:20px;margin:30px 0 6px}
+a{color:var(--gold)}
+ul,ol{padding-left:22px}
+li{margin:4px 0}
+.muted{color:var(--mute);font-size:15px}
